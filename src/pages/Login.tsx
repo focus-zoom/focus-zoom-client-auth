@@ -36,11 +36,12 @@ const Login = () => {
           token,
           { headers: { "Content-Type": "text/plan" } }
         )
-        // 창 닫기
+        window.open('about:blank', '_self');
+        window.close();
       }
     }
     catch (error) {
-      alert('인증 과정 중 에러가 발생했습니다.');
+      alert('로그인 및 연동을 실패했습니다.');
       console.error(error);
     }
   }
